@@ -14,6 +14,12 @@ void AddWord(map<string, string>& dictionary)
     cout << "\nEnter word: ";
     cin >> word;
 
+    if (dictionary.find(word) != dictionary.end())
+    {
+        cout << "This word already exists!\n";
+        return;
+    }
+
     cout << "Enter translation: ";
     cin >> translation;
 
